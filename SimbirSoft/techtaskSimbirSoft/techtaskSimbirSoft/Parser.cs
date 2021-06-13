@@ -20,7 +20,7 @@ namespace techtaskSimbirSoft
                     while (html[i] != '>')
                         i++;
                     if (html[i] == '<')
-                        text += "*";
+                        text += " ";
                 }
                 else
                     text += html[i];
@@ -38,7 +38,7 @@ namespace techtaskSimbirSoft
 
         private static Dictionary<string, int> GetUniqueWords(string[] s)
         {
-            List<string> uniqueWords = new List<string>();
+            var uniqueWords = new List<string>();
             var dict = new Dictionary<string, int>();
             uniqueWords = s.Distinct().ToList();
 
@@ -49,6 +49,5 @@ namespace techtaskSimbirSoft
 
             return dict;
         }        
-
     }
 }
